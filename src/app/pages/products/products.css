@@ -1,0 +1,23 @@
+.card-img-top {
+  height: 300px;             /* Todas las imágenes tendrán la misma altura */
+  width: 100%;               /* Ocupan todo el ancho de la tarjeta */
+  object-fit: cover;         /* Recorta la imagen manteniendo su proporción */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-body {
+  text-align: center;
+}
