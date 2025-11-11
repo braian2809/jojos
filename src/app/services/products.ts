@@ -33,6 +33,27 @@ export class Productos {
       descripcion: 'Primer volumen del manga JoJo’s Bizarre Adventure: Stone Ocean.',
       precio: 19.99,
       imagen: 'https://i.etsystatic.com/53580000/r/il/f990db/6565282459/il_794xN.6565282459_d90o.jpg'
+    },
+    {
+      id: 4,
+      nombre: 'Poster JoJo Golden Wind',
+      descripcion: 'Póster decorativo con los protagonistas de JoJo’s Bizarre Adventure: Golden Wind.',
+      precio: 12.50,
+      imagen: 'https://m.media-amazon.com/images/I/91CG9Ndd+IL._AC_SY606_.jpg'
+    },
+    {
+      id: 5,
+      nombre: 'Sudadera de Jotaro Kujo',
+      descripcion: 'Sudadera negra con estampado del personaje Jotaro Kujo.',
+      precio: 39.90,
+      imagen: 'https://http2.mlstatic.com/D_Q_NP_993481-CBT90156285573_082025-F.webp'
+    },
+    {
+      id: 6,
+      nombre: 'Taza “Pollnareff”',
+      descripcion: 'Taza de cerámica con diseño del icónico momento de Dio Brando.',
+      precio: 14.75,
+      imagen: 'https://http2.mlstatic.com/D_Q_NP_929233-MCO78423618481_082024-F.webp'
     }
   ];
 
