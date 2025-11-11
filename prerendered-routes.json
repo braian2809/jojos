@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/jojos": {},
+    "/jojos/contacto": {},
+    "/jojos/nosotros": {},
+    "/jojos/productos": {}
+  }
+}
