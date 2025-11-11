@@ -3,7 +3,7 @@ export default `<!doctype html>
 <head>
   <meta charset="utf-8">
   <title>Jojo's Bizarre Merch</title>
-  <base href="https://braian2809.github.io/jojos/">
+  <base href="/jojos/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:Franklin Gothic Medium,Arial Narrow,Arial,sans-serif}</style><link rel="stylesheet" href="styles-DM6ATT6S.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-DM6ATT6S.css"></noscript></head>

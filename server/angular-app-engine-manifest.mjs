@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://braian2809.github.io/jojos',
+  basePath: '/jojos',
   supportedLocales: {
   "en-US": ""
 },
