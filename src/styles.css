@@ -9,3 +9,24 @@ img{
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+body {
+  background: linear-gradient(-45deg, #4b0082, #9400d3, #ff00ff, #ffd700);
+  background-size: 400% 400%;
+  animation: aura 10s ease infinite;
+  color: white;
+  font-family: 'Bangers', sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+@keyframes aura {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,42 +1,69 @@
-<section id="seccion-contacto" class="py-5 bg-dark text-light">
-  <div class="container text-center mb-4">
-    <h1 class="fw-bold display-5 text-warning text-uppercase">Contáctanos</h1>
-    <p class="text-light opacity-75">Únete al universo JoJo y recibe las últimas novedades sobre nuestras mercancías exclusivas.</p>
-  </div>
+<div class="contact-container">
+  <h2 class="title">Contáctanos</h2>
 
-  <div id="contenedor-formulario" class="container col-lg-4 col-md-6 col-sm-10 shadow-lg p-4 rounded-4 bg-light text-dark">
-    <div class="text-center mb-4">
-      <img src="https://pbs.twimg.com/media/D6N_99EUcAABb-w.jpg" alt="Contacto" class="img-fluid mb-3" style="max-width: 120px;">
-      <h2 class="fw-bold fs-4 text-primary">Únete a nosotros</h2>
-      <p class="fs-6 text-muted">¿Quieres recibir más información sobre nuestros productos?</p>
+  <form [formGroup]="contactForm" (ngSubmit)="enviar()" class="form">
+    
+    <!-- EMAIL -->
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Ingresa tu correo"
+      />
+      <span class="error" *ngIf="f.email.touched && f.email.invalid">
+        {{ f.email.errors?.['required'] ? 'El correo es obligatorio' : '' }}
+        {{ f.email.errors?.['email'] ? 'Correo no válido' : '' }}
+      </span>
     </div>
 
-    <form>
-      <div class="mb-3">
-        <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
-        <input type="email" class="form-control form-control-sm" id="email" placeholder="nombre@ejemplo.com" required>
-      </div>
+    <!-- NOMBRE -->
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        id="nombre"
+        type="text"
+        formControlName="nombre"
+        placeholder="Ingresa tu nombre"
+      />
+      <span class="error" *ngIf="f.nombre.touched && f.nombre.invalid">
+        El nombre debe tener al menos 2 caracteres.
+      </span>
+    </div>
 
-      <div class="mb-3">
-        <label for="nombre" class="form-label fw-semibold">Nombre Completo</label>
-        <input type="text" class="form-control form-control-sm" id="nombre" placeholder="Gyro Zeppeli" required>
-      </div>
+    <!-- TELEFONO -->
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input
+        id="telefono"
+        type="text"
+        formControlName="telefono"
+        placeholder="Ingresa tu teléfono"
+      />
+      <span class="error" *ngIf="f.telefono.touched && f.telefono.invalid">
+        El teléfono debe tener al menos 7 dígitos.
+      </span>
+    </div>
 
-      <div class="mb-3">
-        <label for="tel" class="form-label fw-semibold">Teléfono</label>
-        <input type="tel" class="form-control form-control-sm" id="tel" placeholder="314 000 0000" required>
-      </div>
+    <!-- MENSAJE -->
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea
+        id="mensaje"
+        rows="4"
+        formControlName="mensaje"
+        placeholder="Escribe tu mensaje aquí..."
+      ></textarea>
+      <span class="error" *ngIf="f.mensaje.touched && f.mensaje.invalid">
+        El mensaje debe tener mínimo 10 caracteres.
+      </span>
+    </div>
 
-      <div class="mb-4">
-        <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
-        <textarea class="form-control form-control-sm" id="mensaje" rows="3" placeholder="Escribe tu mensaje..." required></textarea>
-      </div>
+    <!-- BOTON -->
+    <button type="submit" [disabled]="submitting" class="btn">
+      {{ submitting ? 'Enviando...' : 'Enviar' }}
+    </button>
 
-      <div class="d-grid">
-        <button type="submit" class="btn btn-warning fw-bold text-dark">
-          Enviar Mensaje
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
+  </form>
+</div>
