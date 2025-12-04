@@ -1,75 +1,116 @@
+/* -------- CONTENEDOR GENERAL -------- */
 .contact-container {
-  max-width: 550px;
-  margin: 30px auto;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 40px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #6c00ff;
+  box-shadow: 0 0 15px rgba(108, 0, 255, 0.5);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.title {
+/* -------- TITULO -------- */
+.contact-container h2 {
   text-align: center;
-  font-size: 26px;
   margin-bottom: 20px;
-  color: #1e3a8a; /* Azul */
+  font-size: 28px;
+  color: #b388ff;
+  text-shadow: 0 0 6px #6c00ff;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: 600;
+/* -------- LABELS -------- */
+form label {
+  display: block;
+  font-weight: bold;
   margin-bottom: 6px;
-  color: #1f2937; /* gris oscuro */
+  margin-top: 15px;
+  color: #d0b3ff;
 }
 
-input,
-textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  font-size: 15px;
-  outline: none;
-  transition: border 0.2s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-.error {
-  font-size: 13px;
-  margin-top: 5px;
-  color: #dc2626; /* rojo */
-}
-
-.btn {
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.2s;
+/* -------- INPUTS -------- */
+form input,
+form textarea {
   width: 100%;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 2px solid #6c00ff;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  font-size: 15px;
 }
 
-.btn:hover {
-  background: #1d4ed8;
+form input:focus,
+form textarea:focus {
+  border-color: #b388ff;
+  box-shadow: 0 0 10px #6c00ff;
 }
 
-.btn:disabled {
-  background: #9ca3af;
-  cursor: not-allowed;
+/* -------- TEXTAREA -------- */
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* -------- ERRORES -------- */
+.error-text {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* -------- BOTONES -------- */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btn-submit,
+.btn-cancel {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+/* ENVIAR */
+.btn-submit {
+  background: #6c00ff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(108, 0, 255, 0.7);
+}
+
+.btn-submit:hover {
+  background: #5400cc;
+}
+
+/* CANCELAR */
+.btn-cancel {
+  background: #333;
+  color: #ddd;
+  border: 2px solid #555;
+}
+
+.btn-cancel:hover {
+  background: #222;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 500px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }
